@@ -43,9 +43,10 @@
         background: linear-gradient(to right, $brand-info, $brand-warning);
     }
     &--slider {
-        @include breakpoint(xs) {
-            padding-top: 50px;
-        }
+        padding-top: 0;
+        // @include breakpoint(xs) {
+        //     padding-top: 50px;
+        // }
         .zone__content {
             position: relative;
         }
