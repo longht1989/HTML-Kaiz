@@ -11,15 +11,14 @@
         margin-top: 100px;
     }
     &__title {
-        @include font-size(18, 35);
+        @include font-size(24, 35);
         position: relative;
         font-family: $font-family-special;
         margin-bottom: 50px;
         text-align: center;
         text-transform: uppercase;
-        @include breakpoint(md) {
-            @include font-size(22, 35);
-        }
+        // font-weight: bold;
+        @include breakpoint(md) {}
     }
     &__content {
         @include clearfix();
