@@ -6,29 +6,19 @@
 /* zone global style */
 
 .zone {
-    margin-bottom: 20px;
+    padding-top: 100px;
+    & + .zone--featured {
+        margin-top: 100px;
+    }
     &__title {
         @include font-size(18, 35);
-        background: #f2f2f2;
         position: relative;
-        padding: 0 15px;
         font-family: $font-family-special;
-        margin-bottom: 10px;
-        &::after {
-            display: block;
-            width: 35px;
-            height: 3px;
-            content: '';
-            background: $brand-warning;
-            position: absolute;
-            top: 0;
-            left: 15px;
-        }
-        a {
-            @extend .link-primary;
-        }
+        margin-bottom: 50px;
+        text-align: center;
+        text-transform: uppercase;
         @include breakpoint(md) {
-            @include font-size(20, 35);
+            @include font-size(22, 35);
         }
     }
     &__content {
@@ -47,6 +37,18 @@
             a {
                 color: white;
             }
+        }
+    }
+    &--featured {
+        padding-bottom: 100px;
+        background: linear-gradient(to right, $brand-info, $brand-warning);
+    }
+    &--slider {
+        @include breakpoint(xs) {
+            padding-top: 50px;
+        }
+        .zone__content {
+            position: relative;
         }
     }
 }

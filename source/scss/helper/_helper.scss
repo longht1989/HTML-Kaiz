@@ -5,3 +5,11 @@
         color: $brand-success;
     }
 }
+
+.link-warning {
+    color: $brand-warning;
+    @include transition(color, 0.2, ease);
+    @include haf {
+        color: $brand-success;
+    }
+}

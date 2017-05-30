@@ -1,0 +1,33 @@
+/* style for quote */
+
+.quote {
+    margin: 0 0 20px;
+    &__txt {
+        border-radius: 10px;
+        border: 2px solid $brand-warning;
+        padding: 40px 15px 20px;
+        position: relative;
+        @include font-size(16, 22);
+        margin-bottom: 20px;
+        p {
+            margin-bottom: 10px;
+        }
+        &::after {
+            display: block;
+            content: '';
+            font-family: "Ionicons";
+            position: absolute;
+            bottom: 100%;
+            right: 10px;
+            color: $brand-warning;
+            background: white;
+            padding: 0 5px;
+            transform: translate(0, 50%) rotate(180deg);
+            font-size: 70px;
+            line-height: 1em;
+        }
+    }
+    &__author {
+        @include font-size(18, 24);
+    }
+}

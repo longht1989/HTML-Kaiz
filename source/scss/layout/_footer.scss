@@ -3,28 +3,63 @@
    ==================================== */
 
 #site-footer {
-    margin-top: 30px;
-    background: #333;
-    padding: 20px 10px;
+    margin-top: 100px;
     @include clearfix;
-    @include breakpoint(sm) {
-        padding-left: 0;
-        padding-right: 0;
+    .site-wrap {
+        border-top: 1px solid #ddd;
+        padding: 30px 15px;
+        @include breakpoint(sm) {
+            padding: 45px 0;
+        }
     }
 }
 
 .footer {
-    &__col {
+    &__nav {
+        text-transform: uppercase;
+        margin-bottom: 15px;
+        @include font-size(14, 24);
         @include breakpoint(sm) {
-            width: 50%;
-            float: left;
-            padding: 0 20px;
+            @include font-size(18, 24);
+        }
+        @include breakpoint(md) {
+            margin-bottom: 0px;
+        }
+        a {
+            & + a {
+                &::before {
+                    content: '|';
+                    display: inline;
+                    margin: 0 10px;
+                    color: #000;
+                    @include breakpoint(sm) {
+                        margin: 0 40px;
+                    }
+                }
+                &:hover {
+                    &::before {
+                        color: #000;
+                    }
+                }
+            }
         }
     }
     &__info {
-        p {
-            color: #ccc;
-            @include font-size(14, 22);
+        @include font-size(16, 24);
+        @include breakpoint(sm) {
+            text-align: right;
+        }
+        .logo {
+            @include breakpoint(sm) {
+                float: right;
+            }
+            @include clearfix;
+            margin-bottom: 15px;
+        }
+        p,
+        h4 {
+            margin-bottom: 10px;
+            clear: both;
         }
     }
 }
