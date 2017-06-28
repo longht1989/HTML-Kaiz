@@ -3,9 +3,6 @@
 .story {
     @include clearfix;
     margin-bottom: 24px;
-    @include breakpoint(sm) {
-        margin-bottom: 12px;
-    }
     &__thumb {
         margin-bottom: 7px;
         overflow: hidden;
@@ -13,12 +10,12 @@
         img {
             @include transition(all, 0.2, linear);
             &::after {
-                @include transition(all, 0.4, ease);
+                @include transition(all, 0.4, linear);
             }
         }
         a {
             &::after {
-                @include transition(all, 0.4, ease);
+                @include transition(all, 0.4, linear);
                 display: block;
                 content: '';
                 position: absolute;
@@ -95,6 +92,7 @@
             }
             img {
                 transform: scale(1.1);
+                filter: blur(1px);
             }
         }
     }

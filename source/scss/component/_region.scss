@@ -54,38 +54,6 @@
 }
 
 
-/* box register */
-
-.box {
-    width: 300px;
-    padding: 15px;
-    margin: 0 auto 20px;
-    background: url(../img/bg-mess.png) left top no-repeat;
-    background-size: cover;
-    color: white;
-    &__title {
-        text-align: center;
-        font-weight: bold;
-        font-size: 26px;
-        margin-bottom: 15px;
-        text-shadow: 1px 1px 2px #000;
-    }
-    &__content {
-        text-align: center;
-    }
-    &__desc {
-        margin-bottom: 15px;
-    }
-    &__cta {
-        margin-top: 10px;
-        @include transition(all, 0.2, ease);
-        &:hover {
-            opacity: 0.8;
-        }
-    }
-}
-
-
 /* ads */
 
 .qc {

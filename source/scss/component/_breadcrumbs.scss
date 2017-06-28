@@ -29,25 +29,30 @@
 
 .breadcrumbs {
     font-family: $font-family-special, Helvetica, Arial, sans-serif;
-    margin-bottom: 20px;
+    margin: 20px 0;
+    font-size: 16px;
     .cate {
-        font-size: 20px;
-        margin-bottom: 7px;
+        font-size: 22px;
+        margin-bottom: 8px;
+        font-weight: bold;
         text-transform: uppercase;
     }
     .cate,
     .subcate {
         a {
-            margin-right: 10px;
+            // margin-right: 10px;
             &.active {
                 color: $brand-success;
+            }
+            & + a {
+                margin-left: 15px;
             }
         }
     }
     a {
-        color: $brand-primary;
-        &:hover {
-            color: $brand-success;
-        }
+        // color: $brand-primary;
+        // &:hover {
+        //     color: $brand-success;
+        // }
     }
 }
